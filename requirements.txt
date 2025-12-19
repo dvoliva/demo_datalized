@@ -1,8 +1,1 @@
-# Data processing
-pandas>=2.0.0
-
-# Optional: for database connections
-# sqlalchemy>=2.0.0
-
-# Optional: for environment variables
-# python-dotenv>=1.0.0
+pandas
