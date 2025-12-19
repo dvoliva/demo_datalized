@@ -14,11 +14,11 @@ def load_data():
                 file_path,
                 sep=';',
                 usecols=config.REQUIRED_COLUMNS,
-                encoding='latin1',
-                dtype={'MRUN': str, 'CAT_PERIODO': str}
+                encoding='utf-8',
+                dtype={'mrun': str, 'cat_periodo': int}
             )
 
-            filtered_df = current_df[current_df['CAT_PERIODO'] >= config.MIN_YEAR]
+            filtered_df = current_df[current_df['cat_periodo'] >= config.MIN_YEAR]
 
             if not filtered_df.empty:
                 data_frames.append(filtered_df)
@@ -30,3 +30,11 @@ def load_data():
         return pd.DataFrame()
 
     return pd.concat(data_frames, ignore_index=True)
+
+if __name__ == "__main__":
+    df_test = load_data()
+    
+    if not df_test.empty:
+        print(df_test.head())
+    else:
+        print("error")
