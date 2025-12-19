@@ -13,7 +13,8 @@ REQUIRED_COLUMNS = [
     'rango_edad',
     'tipo_inst_1',
     'modalidad',
-    'jornada'
+    'jornada',
+    'anio_ing_carr_act'
 ]
 
 GENDER_MAP = {
@@ -21,4 +22,4 @@ GENDER_MAP = {
     2: 'Femenino'
 }
 
-MIN_YEAR = 2019
+INVALID_YEARS = [9995, 9998, 9999, 1900]
